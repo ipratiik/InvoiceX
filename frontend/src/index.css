@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark-bg-primary: #0a0d16;
+  --dark-bg-secondary: #1a1d29;
+  --dark-bg-tertiary: #242a3a;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #b8bcc8;
+  --dark-accent: #00d4ff;
+  --dark-accent-hover: #00c2ea;
+  --dark-border: #2d3748;
+}
+
+* {
+  font-family: "Urbanist", sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+.invoiceform input:focus,
+.invoiceform textarea:focus,
+.invoiceform select:focus {
+  box-shadow: none !important;
+}
+
+/* Shared accent buttons */
+.btn-accent {
+  background: linear-gradient(135deg, var(--dark-accent) 0%, #667eea 100%);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(
+    135deg,
+    var(--dark-accent-hover) 0%,
+    #5a67d8 100%
+  );
+  color: #000;
+}
+
+.btn-outline-accent {
+  border: 2px solid var(--dark-accent);
+  color: var(--dark-accent);
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+  background: var(--dark-accent);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+}
+
+/* ===== Dark Theme Tokens (Global) ===== */
+:root {
+  --dark-bg-primary: #0a0d16;
+  --dark-bg-secondary: #1a1d29;
+  --dark-bg-tertiary: #242a3a;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #b8bcc8;
+  --dark-accent: #00d4ff;
+  --dark-accent-hover: #00c2ea;
+  --dark-border: #2d3748;
+}
+
+body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+/* Shared accent buttons */
+.btn-accent {
+  background: linear-gradient(135deg, var(--dark-accent) 0%, #667eea 100%);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(
+    135deg,
+    var(--dark-accent-hover) 0%,
+    #5a67d8 100%
+  );
+  color: #000;
+}
+
+.btn-outline-accent {
+  border: 2px solid var(--dark-accent);
+  color: var(--dark-accent);
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-accent:hover {
+  background: var(--dark-accent);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+}

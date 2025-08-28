@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --dark-bg: #0a0d16;
+  --dark-card: #121722;
+  --dark-border: #2d3748;
+  --dark-text: #e2e8f0;
+  --dark-text-muted: #a0aec0;
+  --dark-accent: #00d4ff;
+  --dark-accent-hover: #00b8d9;
+  --dark-shadow: rgba(0, 0, 0, 0.2);
+  --accent-shadow: rgba(0, 212, 255, 0.2);
+}
+
+.dashboard-container {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  letter-spacing: -1px;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: var(--dark-text-muted);
+  max-width: 500px;
+  margin: 0.5rem auto 0;
+}
+
+.dashboard-grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.invoice-card,
+.create-new-card {
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 302px;
+  box-shadow: 0 4px 12px var(--dark-shadow);
+}
+
+.invoice-card:hover,
+.create-new-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px var(--dark-shadow), 0 0 20px var(--accent-shadow);
+  border-color: var(--dark-accent);
+}
+
+.create-new-card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.create-new-card .icon {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    color 0.3s ease;
+  color: var(--dark-text-muted);
+}
+
+.create-new-card:hover .icon {
+  transform: scale(1.15) rotate(90deg);
+  color: var(--dark-accent);
+}
+
+.create-new-card-text {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--dark-text-muted);
+  transition: color 0.3s ease;
+}
+
+.create-new-card:hover .create-new-card-text {
+  color: var(--dark-accent);
+}
+
+.invoice-card-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--dark-border);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.invoice-card:hover .invoice-card-thumbnail {
+  opacity: 1;
+}
+
+.invoice-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.invoice-card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--dark-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.invoice-card-date {
+  font-size: 0.8rem;
+  color: var(--dark-text-muted);
+  margin-top: auto;
+}
